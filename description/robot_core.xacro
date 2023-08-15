@@ -19,6 +19,10 @@
         <color rgba="0.2 0.2 1 1"/>
     </material>
 
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
     <!-- Base footprint -->
 
     <link name="base_footprint" />
@@ -131,7 +135,7 @@
             <geometry>
                 <sphere radius="0.02"/>
             </geometry>
-            <material name="orange" />
+            <material name="blue" />
         </visual>
         <collision>
             <geometry>
@@ -144,7 +148,7 @@
     </link>
 
     <gazebo reference="caster_front_wheel">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/Blue</material>
         <mu1 value="0.001"/>
         <mu2 value="0.001"/>
     </gazebo>
@@ -160,7 +164,7 @@
             <geometry>
                 <sphere radius="0.02"/>
             </geometry>
-            <material name="orange" />
+            <material name="blue" />
         </visual>
         <collision>
             <geometry>
@@ -173,7 +177,7 @@
     </link>
 
     <gazebo reference="caster_back_wheel">
-        <material>Gazebo/Orange</material>
+        <material>Gazebo/Blue</material>
         <mu1 value="0.001"/>
         <mu2 value="0.001"/>
     </gazebo>
