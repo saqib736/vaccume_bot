@@ -67,6 +67,14 @@ def generate_launch_description():
         )
     )
 
+    ekf = Node(
+            package='robot_localization',
+            executable='ekf_node',
+            name='ekf_filter_node',
+            output='screen',
+            parameters=[os.path.join(get_package_share_directory(package_name), 'config', 'ekf.yaml')],
+           )
+
 
     # Code for delaying a node (I haven't tested how effective it is)
     # 
@@ -91,5 +99,6 @@ def generate_launch_description():
         rsp,
         delayed_controller_manager,
         delayed_diff_drive_spawner,
-        delayed_joint_broad_spawner
+        delayed_joint_broad_spawner,
+        ekf
     ])
